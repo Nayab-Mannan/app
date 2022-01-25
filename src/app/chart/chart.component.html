@@ -1,0 +1,22 @@
+<head>
+    <script src="assets/chartjs/Chart.bundel.min.js"></script>
+</head>
+
+
+<!-- <div class="container-fluid">
+    <div class="row header-section">
+        <span> File Upload</span>
+    </div>
+</div> -->
+<div class="row card" style="margin: 20px;">
+    <input type="file" name="fileUplaod" id="fileUpload"
+    multiple accept=".json"  (change)="fileChangeEvent($event)">
+    
+</div>
+
+<div style="width:1200px;margin-top: 30px;">
+    <canvas id="myChart" width="700" height="250" #mychart></canvas>
+  </div>
+
+  
+ 

@@ -1,0 +1,71 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1>{{title}}</h1>
+        </div>
+    </div>
+    <hr />
+    <div class="table-responsive">
+        <table class="table table-stripped table-bordered">
+            <tr class="thead-dark">
+                <th>ID#</th>
+                <th>Name</th>
+                <th>SKU</th>
+                <th>Price</th>
+                <th>Is Enabled</th>
+                <th>Action</th>
+            </tr>
+            <ng-container *ngFor="let row of rows | paginate: { itemsPerPage: limit, currentPage: p, totalItems: total }">
+                <tr>
+                    <td>{{row.id}}</td>
+                    <td>{{row. full_name}}</td>
+                    <td>{{row.sku}}</td>
+                    <td>{{row.price}}</td>
+                    <td>
+                        <span *ngIf="row.is_active" class="badge badge-success">Enabled</span>
+                        <span *ngIf="!row.is_active" class="badge badge-danger">Disabled</span>
+                    </td>
+                </tr>
+            </ng-container>
+            <tr *ngIf="rows.length == 0">
+                <td colspan="6" class="text-center">No records.</td>
+            </tr>
+        </table>
+    </div>
+    <div class="pagination pagination-sm m-0 float-right">
+        <pagination-controls (pageChange)="getPage($event)"></pagination-controls>
+    </div>
+</div> -->
+
+<!-- <div class="jumbotron">
+ 
+    <div class="text-center">
+    <a href="https://jsonworld.com"><h2>JSON WORLD</h2></a>
+    <a href="" target="_blank"><span>Server Side Pagination in Angular using ngx-pagination</span></a>
+    </div>
+    <div class="list">
+    <ul>
+    <li *ngFor="let data of collection | paginate: config">{{data }}</li>
+    </ul>
+    <pagination-controls (pageChange)="pageChange($event)" class="my-pagination"></pagination-controls>
+    </div>
+    </div> -->
+
+    <div>
+        <p *ngFor="
+          let item of passenger
+            | paginate
+              : {
+                  itemsPerPage: itemsPerPage,
+                  currentPage: page,
+                  totalItems: totalItems
+                } ">
+          {{item.id}}
+        </p>
+        <!-- <span>{{item.last_name}}</span> -->
+    </div>
+    <pagination-controls
+      class="pagi" (pageChange)="gty((page = $event))" >
+    </pagination-controls>
+
+    

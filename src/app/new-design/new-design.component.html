@@ -1,0 +1,617 @@
+<!-- Model-page -->
+<body>
+    <div class="main">
+        <div class="left-nav-frame">
+        <div fxLayout="column"> 
+           <div>
+               <div>
+                   <div class="nav-frame">
+                       <div>
+                            <div class="icon-ingestion">
+                              <mat-icon matListAvatar iconAvatar class="info">local_bar</mat-icon>
+                            </div>  
+                        </div> 
+                        <div class="nav-text">
+                           <h4 class="h4">Ingestion</h4>
+                         </div>  
+                    </div>   
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="nav-frame">
+                        <div>
+                            <div class="icon-ingestion">
+                               <mat-icon matListAvatar iconAvatar class="info">local_bar</mat-icon>
+                            </div>  
+                        </div> 
+                        <div class="nav-text">
+                            <h4 class="h4">Curation</h4>
+                        </div>  
+                    </div>   
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="nav-frame">
+                        <div>
+                            <div class="icon-ingestion">
+                                <mat-icon matListAvatar iconAvatar class="info">local_bar</mat-icon>
+
+                            </div>  
+                        </div> 
+                        <div class="nav-text">
+                            <h4 class="h4">Analytics</h4>
+                        </div>  
+                    </div>   
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="nav-frame">
+                        <div>
+                            <div class="icon-ingestion">
+                                <span class="material-icons">
+                                    school
+                                </span>
+                            </div>  
+                        </div> 
+                        <div class="nav-text">
+                            <h4 class="h4">Knowledge</h4>
+                        </div>  
+                    </div>   
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="nav-frame">
+                        <div>
+                            <div class="icon-ingestion">
+                               <mat-icon matListAvatar iconAvatar class="info">local_bar</mat-icon>
+                            </div>  
+                        </div> 
+                        <div class="nav-text">
+                            <h4 class="h4">Informatics</h4>
+                        </div>  
+                    </div>   
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="nav-frame">
+                        <div>
+                            <div class="icon-ingestion">
+                                <span class="material-icons">
+                                    remove_red_eye
+                                </span>
+                            </div>  
+                        </div> 
+                        <div class="nav-text">
+                            <h4 class="h4">VISION</h4>
+                        </div>  
+                    </div>   
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="nav-frame">
+                        <div>
+                            <div class="icon-ingestion">
+                               <mat-icon matListAvatar iconAvatar class="info">local_bar</mat-icon>
+                            </div>  
+                        </div> 
+                        <div class="nav-text">
+                            <h4 class="h4">Scribe</h4>
+                        </div>  
+                    </div>   
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="nav-frame">
+                        <div>
+                            <div class="icon-ingestion">
+                               <mat-icon matListAvatar iconAvatar class="info">local_bar</mat-icon>
+                            </div>  
+                        </div> 
+                        <div class="nav-text">
+                            <h4 class="h4">DATA</h4>
+                        </div>  
+                    </div>   
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="nav-frame">
+                        <div>
+                            <div class="icon-ingestion">
+                                <mat-icon matListAvatar iconAvatar class="info">local_bar</mat-icon>
+                            </div>  
+                        </div> 
+                        <div class="nav-text">
+                            <h4 class="h4">Admin</h4>
+                        </div>  
+                    </div>   
+                </div>
+            </div>        
+        </div>
+        </div> 
+        <!-- Right Container -->
+
+        <div class="right-container">
+            <div>
+                <div class="project-name">
+                    <h2>Project Name</h2>
+                    <div class="arrow">
+                        <mat-icon class="arrow-icon">keyboard_backspace</mat-icon>
+                    </div>    
+                </div> 
+                <!-- Dataset -->
+                <div>
+                    <div>
+                        <div class="model-frame">
+                            <mat-accordion>
+                                <mat-expansion-panel  [togglePosition]="'before'">
+                                    <mat-expansion-panel-header>
+                                        <div class="frame2">
+                                            <div class="model-text">
+                                                Datasets
+                                               
+                                            </div> 
+                                            <div class="dataset-button"> 
+                                                <div class="number">31
+                                                 </div>   
+                                                <button class="add-bttn">
+                                                    <span class="add-text">Add</span>
+                                                    <span class="add-icon"><mat-icon class="icon-add">add</mat-icon></span>
+                                                </button>
+                                            </div>    
+                                        </div> 
+                                        
+                                    </mat-expansion-panel-header>
+                                    
+                                        <div class="table-dataset">
+                                            <div>
+                                                <div class="heading">
+                                                    <div class="heading-name">
+                                                        Name
+                                                     </div>  
+                                                     <div class="heading-owner">
+                                                        Created By
+                                                     </div>   
+                                                     <div class="heading-feature">
+                                                        Feature
+                                                     </div>   
+                                                     <div class="heading-size">
+                                                        Size
+                                                     </div>
+                                                     <div class="heading-access">
+                                                        Last Access
+                                                    </div>     
+                                                </div>
+                                                <hr class="heading-line">   
+                                            </div> 
+                                            <div >
+                                                <div class="table-data-frame" *ngFor="let data of avengers">
+                                                    <div class="table-data-frame-second">
+                                                        <div class="first-data-frame">
+                                                            <div class="first-data">
+                                                                <h3 class="first-data-text">
+                                                                    {{data.model}}
+                                                                 </h3>   
+                                                             </div> 
+                                                             <div class="star">
+                                                                <mat-icon>star_border</mat-icon>
+                                                            </div> 
+                                                        </div>  
+                                                        <div class="second-data">
+                                                            <h3 class="second-data-text">
+                                                                {{data.name}}
+                                                            </h3> 
+                                                        </div>
+                                                            
+                                                        <div class="second-data">
+                                                            <h3 class="second-data-text1">
+                                                                {{data.feature}}
+                                                            </h3> 
+                                                        </div>   
+                                                        <div class="second-data">
+                                                            <h3 class="second-data-text1">
+                                                               {{data.size}}
+                                                            </h3> 
+                                                        </div>
+                                                        <div class="first-data-frame">
+                                                            <div class="access-data">
+                                                                <h3 class="second-data-text1">
+                                                                    {{data.access}}
+                                                                 </h3>   
+                                                             </div> 
+                                                             <div class="star">
+                                                                <mat-icon>more_vert</mat-icon>
+                                                            </div> 
+                                                        </div>
+
+                                                    </div>   
+                                                </div>
+                                                
+                                            </div>     
+                                        </div>    
+                                
+                                </mat-expansion-panel>
+                            <!-- Models -->
+                             <mat-expansion-panel  [togglePosition]="'before'"> 
+                                <mat-expansion-panel-header>
+                                    <div class="frame2">
+                                        <div class="model-text">
+                                           Models
+                                           
+                                        </div> 
+                                        <div class="dataset-button"> 
+                                            <div class="number">10
+                                             </div>   
+                                            <button class="add-bttn">
+                                                <span class="add-text">Add</span>
+                                                <span class="add-icon"><mat-icon class="icon-add">add</mat-icon></span>
+                                            </button>
+                                        </div>    
+                                    </div> 
+                                    
+                                </mat-expansion-panel-header>
+                                
+                                    <div class="table-modelset">
+                                        <div>
+                                            <div class="heading">
+                                                <div class="heading-name-model">
+                                                    Name
+                                                 </div>  
+                                                 <div class="heading-name-model">
+                                                    Model Type
+                                                 </div>   
+                                                 <div class="heading-name-model">
+                                                    Inputs
+                                                 </div>   
+                                                 <div class="heading-name-model">
+                                                    Outputs
+                                                 </div>
+                                                 <div class="heading-name-model">
+                                                    Created By
+                                                </div>  
+                                                <div class="heading-name-model">
+                                                    Dataset Source
+                                                </div>   
+                                                <div class="heading-name-model">
+                                                    Last Access
+                                                </div>      
+                                            </div>
+                                            <hr class="heading-line">   
+                                        </div> 
+                                        <div >
+                                            <div class="table-data-frame" *ngFor="let data of models">
+                                                <div class="table-data3">
+                                                    <div class="first-data-frame">
+                                                        <div class="first-data">
+                                                            <h3 class="first-data-text-model">
+                                                                {{data.model}}
+                                                             </h3>   
+                                                         </div> 
+                                                         <div class="star">
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </div> 
+                                                    </div>  
+                                                    <div class="second-data-model">
+                                                        <h3 class="first-data-model1">
+                                                            {{data.type}}
+                                                        </h3> 
+                                                    </div>
+                                                        
+                                                    <div class="second-data-model">
+                                                        <h3 class="first-data-text-model1">
+                                                            {{data.inputs}}
+                                                        </h3> 
+                                                    </div>   
+                                                    <div class="second-data-model">
+                                                        <h3 class="first-data-text-model1">
+                                                           {{data.outputs}}
+                                                        </h3> 
+                                                    </div>
+                                                    <div class="second-data-model">
+                                                        <h3 class="first-data-text-model1">
+                                                           {{data.created}}
+                                                        </h3> 
+                                                    </div>
+                                                    <div class="second-data-model">
+                                                        <h3 class="first-data-text-model1">
+                                                           {{data.dataset}}
+                                                        </h3> 
+                                                    </div>
+
+                                                    <div class="first-data-frame">
+                                                        <div class="access-data">
+                                                            <h3 class="second-data-text">
+                                                                {{data.access}}
+                                                             </h3>   
+                                                         </div> 
+                                                         <div class="star">
+                                                            <mat-icon>more_vert</mat-icon>
+                                                        </div> 
+                                                    </div>
+
+                                                </div>   
+                                            </div>
+                                            
+                                        </div>     
+                                    </div>    
+                            
+                            </mat-expansion-panel> 
+                            <!-- WORKFLOWS -->
+                            <mat-expansion-panel  [togglePosition]="'before'">
+                                <mat-expansion-panel-header>
+                                    <div class="frame2">
+                                        <div class="model-text">
+                                            Workflows
+                                           
+                                        </div> 
+                                        <div class="dataset-button"> 
+                                            <div class="number">7
+                                             </div>   
+                                            <button class="add-bttn">
+                                                <span class="add-text">Add</span>
+                                                <span class="add-icon"><mat-icon class="icon-add">add</mat-icon></span>
+                                            </button>
+                                        </div>    
+                                    </div> 
+                                    
+                                </mat-expansion-panel-header>
+                                
+                                    <div class="table-dataset">
+                                        <div>
+                                            <div class="heading">
+                                                <div class="heading-name">
+                                                    Name
+                                                 </div>  
+                                                 <div class="heading-owner">
+                                                    Created By
+                                                 </div>   
+                                                 <div class="heading-feature">
+                                                   Type
+                                                 </div>   
+                                                 <div class="heading-size">
+                                                    API
+                                                 </div>
+                                                 <div class="heading-access">
+                                                    Last Access
+                                                </div>     
+                                            </div>
+                                            <hr class="heading-line">   
+                                        </div> 
+                                        <div >
+                                            <div class="table-data-frame" *ngFor="let data of work">
+                                                <div class="table-data-frame-second">
+                                                    <div class="first-data-frame">
+                                                        <div class="first-data">
+                                                            <h3 class="first-data-text">
+                                                                {{data.model}}
+                                                             </h3>   
+                                                         </div> 
+                                                         <div class="star">
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </div> 
+                                                    </div>  
+                                                    <div class="second-data">
+                                                        <h3 class="second-data-text">
+                                                            {{data.name}}
+                                                        </h3> 
+                                                    </div>
+                                                        
+                                                    <div class="second-data">
+                                                        <h3 class="second-data-text1">
+                                                            {{data.feature}}
+                                                        </h3> 
+                                                    </div>   
+                                                    <div class="second-data">
+                                                        <h3 class="second-data-text1">
+                                                           {{data.size}}
+                                                        </h3> 
+                                                    </div>
+                                                    <div class="first-data-frame">
+                                                        <div class="access-data">
+                                                            <h3 class="second-data-text1">
+                                                                {{data.access}}
+                                                             </h3>   
+                                                         </div> 
+                                                         <div class="star">
+                                                            <mat-icon>more_vert</mat-icon>
+                                                        </div> 
+                                                    </div>
+
+                                                </div>   
+                                            </div>
+                                            
+                                        </div>     
+                                    </div>    
+                            
+                            </mat-expansion-panel>
+                            <!-- REPORTS -->
+                            <mat-expansion-panel  [togglePosition]="'before'">
+                                <mat-expansion-panel-header>
+                                    <div class="frame2">
+                                        <div class="model-text">
+                                           Reports
+                                           
+                                        </div> 
+                                        <div class="dataset-button"> 
+                                            <div class="number">8
+                                             </div>   
+                                            <button class="add-bttn">
+                                                <span class="add-text">Add</span>
+                                                <span class="add-icon"><mat-icon class="icon-add">add</mat-icon></span>
+                                            </button>
+                                        </div>    
+                                    </div> 
+                                    
+                                </mat-expansion-panel-header>
+                                
+                                    <div class="table-dataset">
+                                        <div>
+                                            <div class="heading">
+                                                <div class="heading-name">
+                                                    Name
+                                                 </div>  
+                                                 <div class="heading-owner">
+                                                    Created By
+                                                 </div>   
+                                                 <div class="heading-feature">
+                                                  Size
+                                                 </div>  
+                                                 <div class="heading-access">
+                                                    Last Access
+                                                </div>  
+                                                 <div >
+                                                   
+                                                 </div>
+                                                     
+                                            </div>
+                                            <hr class="heading-line">   
+                                        </div> 
+                                        <div >
+                                            <div class="table-data-frame" *ngFor="let data of work">
+                                                <div class="table-data-frame-second">
+                                                    <div class="first-data-frame">
+                                                        <div class="first-data">
+                                                            <h3 class="first-data-text">
+                                                                {{data.model}}
+                                                             </h3>   
+                                                         </div> 
+                                                         <div class="star">
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </div> 
+                                                    </div>  
+                                                    <div class="second-data">
+                                                        <h3 class="second-data-text">
+                                                            {{data.name}}
+                                                        </h3> 
+                                                    </div>
+                                                        
+                                                    <div class="second-data">
+                                                        <h3 class="second-data-text1">
+                                                            {{data.feature}}
+                                                        </h3> 
+                                                    </div>   
+                                                    <div class="second-data">
+                                                        <h3 class="second-data-text1">
+                                                           {{data.size}}
+                                                        </h3> 
+                                                    </div>
+                                                    <div class="first-data-frame">
+                                                
+                                                         <div class="star">
+                                                            <mat-icon>more_vert</mat-icon>
+                                                        </div> 
+                                                    </div>
+
+                                                </div>   
+                                            </div>
+                                            
+                                        </div>     
+                                    </div>    
+                            
+                            </mat-expansion-panel>
+                            <!-- <TEAM> -->
+                                <mat-expansion-panel  [togglePosition]="'before'">
+                                    <mat-expansion-panel-header>
+                                        <div class="frame2">
+                                            <div class="model-text">
+                                              Teams
+                                               
+                                            </div> 
+                                            <div class="dataset-button"> 
+                                                <div class="number">5
+                                                 </div>   
+                                                <button class="add-bttn">
+                                                    <span class="add-text">Add</span>
+                                                    <span class="add-icon"><mat-icon class="icon-add">add</mat-icon></span>
+                                                </button>
+                                            </div>    
+                                        </div> 
+                                        
+                                    </mat-expansion-panel-header>
+                                    
+                                        <div class="table-dataset">
+                                            <div>
+                                                <div class="heading">
+                                                    <div class="heading-team-name">
+                                                        Name
+                                                     </div>  
+                                                     <div class="heading-team-name">
+                                                       Role
+                                                     </div>   
+                                            
+                                                     <div class="heading-access">
+                                                        Last Active
+                                                    </div>  
+                                                     <div >
+                                                       
+                                                     </div>
+                                                         
+                                                </div>
+                                                <hr class="heading-line">   
+                                            </div> 
+                                            <div >
+                                                <div class="table-data-frame" *ngFor="let data of work">
+                                                    <div class="table-data-frame-second">
+                                                        <div class="first-data-frame">
+                                                            <div class="first-data">
+                                                                <h3 class="team-text">
+                                                                    {{data.model}}
+                                                                 </h3>   
+                                                             </div> 
+                                                             <div class="star">
+                                                                <mat-icon>star_border</mat-icon>
+                                                            </div> 
+                                                        </div>  
+                                                        <div class="team-second-data">
+                                                            <h3 class="second-data-text">
+                                                                {{data.name}}
+                                                            </h3> 
+                                                        </div>
+                                                            
+                                                        <div class="second-data">
+                                                            <h3 class="second-data-text1">
+                                                                {{data.feature}}
+                                                            </h3> 
+                                                        </div>   
+                                                        
+                                                        <div class="first-data-frame">
+                                                    
+                                                             <div class="star">
+                                                                <mat-icon>delete_outline</mat-icon>
+                                                            </div> 
+                                                        </div>
+    
+                                                    </div>   
+                                                </div>
+                                                
+                                            </div>     
+                                        </div>    
+                                
+                                </mat-expansion-panel>
+                                
+                            
+                            </mat-accordion>   
+                        </div>
+                    </div>   
+                      
+                </div>      
+            </div>    
+        </div> 
+
+    </div>    
+</body> 
+
+   
+
+
+
+
+
+

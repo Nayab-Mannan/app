@@ -1,0 +1,219 @@
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<mat-toolbar class="header">
+    <div class="logo pull-left" style="background-color:rgb(250, 252, 253);padding: 0px 50px; height: 60px;">
+          <mat-form-field appearance="outline">
+            <mat-label style="text-align: start;">Search</mat-label>
+            <input matInput>
+            <mat-icon matPrefix style="vertical-align: middle; margin-right: 20px;">search</mat-icon>
+            <mat-icon matSuffix style="text-align: end;">clear</mat-icon>
+            
+          </mat-form-field>
+          
+    </div>
+   
+
+    <button mat-icon-button [matMenuTriggerFor]="menunot" aria-label="Example icon-button with a menu">
+        <mat-icon style="color: rgb(236, 229, 229); font-size: 30px;">notification_important</mat-icon>
+      </button>
+     
+      <mat-menu #menunot="matMenu">
+        <span style="text-align: center ; color: darkcyan; font-size: 20px; font-weight: bold; margin: 40px 40px;">Notification</span>
+        <button mat-menu-item>
+            <mat-icon>question_answer</mat-icon>
+          <span>Demo.studenthas responded in a discussions</span>
+          <mat-slide-toggle></mat-slide-toggle>
+        </button>
+        <button mat-menu-item >
+            <mat-icon>question_answer</mat-icon>
+          <span>Demo.studenthas responded in a discussions</span>
+          <mat-slide-toggle></mat-slide-toggle>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>question_answer</mat-icon>
+            <span>Demo.studenthas responded in a discussions</span>
+            <mat-slide-toggle></mat-slide-toggle>
+        </button>
+        <button mat-menu-item >
+            <mat-icon>question_answer</mat-icon>
+            <span>Demo.studenthas responded in a discussions</span>
+            <mat-slide-toggle></mat-slide-toggle>
+        </button>
+        <button mat-menu-item >
+            <mat-icon>question_answer</mat-icon>
+            <span>Demo.studenthas responded in a discussions</span>
+            <mat-slide-toggle></mat-slide-toggle>
+        </button>
+        <button (click)="show = !show" class="click-bttn">Click</button>
+        <mat-chip-list *ngIf="show">
+          <mat-chip>Snooze</mat-chip>
+          <mat-chip>Complete</mat-chip>
+        </mat-chip-list>
+      </mat-menu>
+
+
+
+
+      <span class="example-spacer"></span>
+    <div fxlayout="row">
+      <div class="topnav">
+        <a  href="#home"> <button mat-icon-button [matMenuTriggerFor]="computer" aria-label="Example icon-button with a menu">
+          <mat-icon style="vertical-align:top;">computer</mat-icon>
+      </button> 
+        </a>
+        <mat-menu #computer="matMenu">
+          <button mat-menu-item>
+            <mat-icon>reorder</mat-icon>
+            <span style="font-weight: bold; font-size: 20px;">Photo Info</span>
+          </button>
+        <mat-tab-group dynamicHeight>
+  <mat-tab label="Short tab">
+    <div class="example-small-box mat-elevation-z4">
+      <button mat-menu-item>
+        <mat-icon>nature</mat-icon>
+        <span>Nature</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon> local_bar</mat-icon>
+        <span>Night life</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>calendar_today</mat-icon>
+        <span>November</span>
+      </button>
+    </div>
+  </mat-tab>
+  <mat-tab label="Long tab">
+    <div class="example-large-box mat-elevation-z4">
+     
+    </div>
+  </mat-tab>
+</mat-tab-group>
+        </mat-menu>
+            <a  href="#home">
+            <button mat-button [matMenuTriggerFor]="animals"><mat-icon style="vertical-align:top;">apps</mat-icon></button>
+            
+          </a>
+            <mat-menu #animals="matMenu">
+              <button mat-menu-item [matMenuTriggerFor]="vertebrates"><span>Information</span></button>
+              <button mat-menu-item disabled>
+                <mat-icon>voicemail</mat-icon>
+                <span>Check voice mail</span>
+              </button>
+             <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>Disable alerts</span>
+             </button>
+             <button mat-menu-item>
+                <mat-icon>notification_important</mat-icon>
+                <span>Notification alerts</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>no_encryption</mat-icon>
+                <span>Disable alerts</span>
+              </button>
+            </mat-menu>
+            
+            <mat-menu #vertebrates="matMenu">
+              <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+              <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+              <button mat-menu-item>Birds</button>
+              <button mat-menu-item>Mammals</button>
+            </mat-menu>
+            
+            <mat-menu #fish="matMenu">
+              <button mat-menu-item>Baikal oilfish</button>
+              <button mat-menu-item>Bala shark</button>
+              <button mat-menu-item>Ballan wrasse</button>
+              <button mat-menu-item>Bamboo shark</button>
+              <button mat-menu-item>Banded killifish</button>
+            </mat-menu>
+            
+            <mat-menu #amphibians="matMenu">
+              <button mat-menu-item>Sonoran desert toad</button>
+              <button mat-menu-item>Western toad</button>
+              <button mat-menu-item>Arroyo toad</button>
+              <button mat-menu-item>Yosemite toad</button>
+            </mat-menu>
+
+         
+        <a href="#news"><mat-icon class="icon">alarm_add</mat-icon></a>
+        <a href="#contact"><mat-icon class="icon">alarm</mat-icon></a>
+        <a href="#about">
+            <button mat-icon-button [matMenuTriggerFor]="menu1" aria-label="Example icon-button with a menu">
+            
+            <mat-icon class="icon" style="vertical-align: top;">account_circle</mat-icon>
+        </button>
+        </a>
+          <mat-menu #menu1="matMenu">
+            <button mat-menu-item>
+                <mat-icon>account_circle</mat-icon>
+              <span>Update Profile</span>
+            </button>
+            <button mat-menu-item >
+                <mat-icon>settings</mat-icon>
+              <span>Account Setting</span>
+            </button>
+          </mat-menu>
+
+
+
+        <a href="#about">  Multiscale</a>
+      </div>
+    </div>
+</mat-toolbar>
+
+
+
+<h1 style="margin-top: 100px;">Product List</h1>
+<button style="background-color: darkcyan; border: none; margin: 10px; color: white;padding: 10px;"  
+(click)="showAddProductForm()">Add Product</button>
+
+<div *ngIf="alert" class="alert alert-success alert-dismissible " role="alert">
+  <strong>Success!</strong> Data enterted successfully.
+  <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div style="margin-top: 40px;" *ngIf="showForm">
+  <h2>Add Product</h2>
+  <form class="mat-dialog-content"  >
+  <input type="text" [(ngModel)]="dataObject.id" [ngModelOptions]="{standalone: true}" placeholder="Enter id"><br><br>
+  <input type="text" [(ngModel)]="dataObject.title" [ngModelOptions]="{standalone: true}" placeholder="Enter name"><br><br>
+  <input type="text" [(ngModel)]="dataObject.userId" [ngModelOptions]="{standalone: true}" placeholder="Enter UserId"><br><br>
+  <button style="margin-bottom: 20px;background-color: darkcyan;color: white;border: none;padding: 8px;"  (click)="onSubmit();">Submit</button>
+  </form>
+</div>
+
+
+<div class="titleContainer" >
+  <div class="idTitle">ID</div>
+  <div class="nameTitle">Name</div>
+  <div class="descriptionTitle">User Id</div>
+  <div class="buttonTitle"></div>
+</div>
+
+
+<div class="infoContainer"  *ngFor="let item of data">
+  <div class="id">{{item.id}}</div>
+  <div class="name">{{item.title}}</div>
+  <div class="description">{{item.userId}}</div> 
+  <div class="button">
+  
+      <button  class="editBtn"><a routerLink="/Update/{{item.id}}" style="color: white;">Edit</a></button>
+    
+      <button class="deleteBtn" (click)="delete(item.id)">Delete</button>
+     
+   </div>
+</div> 
+
+<!-- <router-outlet></router-outlet> -->

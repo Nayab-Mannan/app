@@ -1,0 +1,43 @@
+table {
+padding: 16px;
+height: 150px;
+left: calc(50% - 1169px/2);
+top: calc(50% - 465px/2 - 174.5px);
+background: #FFFFFF;
+border-radius: 16px;
+width: 1169px;
+border-collapse: collapse;   
+  } 
+th {
+padding: 0px 0px 0px 30px;
+ border-bottom: 3px solid #0798B6;
+ font-size: 16px;
+ line-height: 24px;
+ letter-spacing: 0.15px;
+ font-weight: normal;
+ color: #018786;
+ text-align: left;  
+  }
+td {
+ border-bottom: 1px solid #D8D8D8; ;
+  } 
+.dataset-frame{
+display: flex;
+align-items: center;
+}
+.dataset{ 
+order: 1;   
+ }
+.data-text{  
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0.25px;
+color: #4D4D4D;
+ margin: 0px 0px;
+}
+.star{
+margin: 0px 16px;
+color: #d3cfcf;
+}

@@ -1,0 +1,350 @@
+<div class="main">
+ <mat-toolbar class="header">
+  <div class="logo pull-left">
+    <img src="assets/images/Logo (1).PNG" id="logo1" width="200px" height="50px">
+  </div>
+    <span class="example-spacer"></span>
+    <div fxlayout="row">
+      <div class="topnav">
+      <a  href="#home"><mat-icon>computer</mat-icon></a>
+      <a  href="#home">My Work</a>
+      <a href="#news"><mat-icon class="icon">alarm_add</mat-icon></a>
+      <a href="#contact"><mat-icon class="icon">alarm</mat-icon></a>
+      <a href="#about"> <mat-icon class="icon">account_circle</mat-icon></a>
+      <a href="#about">  Multiscale</a>
+    </div>
+  </div>
+  </mat-toolbar>
+
+  <div fxLayout="row" fxLayoutAlign="space-around center" class="tabs-container">
+      <section>
+        <div class="example-button-row">
+          <button mat-raised-button class="tabs-container-button">Material Library</button>
+          <button mat-raised-button class="tabs-container-button">Workflow Library</button>
+          <button mat-raised-button class="tabs-container-button">PDF</button>
+          <button mat-raised-button  class="tabs-container-button">Tools</button>
+        </div>
+        <div>
+             <mat-radio-group aria-label="Select an option" class="radio-button">
+                <mat-radio-button value="1" style="margin-left: 20px;" >Method 1</mat-radio-button>
+                <mat-radio-button value="2" style="margin-left: 120px; margin-top: 10px;  margin-bottom: 10px;">Method 2</mat-radio-button>
+              </mat-radio-group>
+        </div>
+      </section>   
+  </div>
+
+    <div class=main-container fxlayout="column" fxLayoutGap="15px"  >
+        <div fxlayout="row"  fxLayoutGap="380px" fxflex="100" >
+            
+          <div fxFlex="60" fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="start center">
+            <div fxflex  style="width: 60%;">
+                <!-- <span matPrefix> <mat-icon>search</mat-icon></span>  -->
+                <input class="search-bar" type="text"placeholder="Search...">
+            </div>  
+            <div>
+                <i class="material-icons search-info-icon" matTooltip="Search" >info</i>
+            </div>
+            <div class="show-result">
+                 <p> Show Results</p>
+            </div> 
+          </div>
+            <div fxflex="10" fxlayout="row" fxLayoutGap="25px" fxLayoutAlign="end center">
+                <div fxlayout="row" fxLayoutGap="5px" fxLayoutAlign="end center">
+                    <div > <p class="model">Model Calibration</p>
+                    </div>
+                    <div>
+                       <span>
+                        <mat-icon style=" color: #21969D;font-size: 32px; ">menu</mat-icon>
+                        </span>
+                    </div>
+                </div>
+
+                <div fxlayout="row" fxLayoutGap="5px" fxLayoutAlign="end center">
+                     <div> <p class="model">Add Model </p>
+                     </div>
+                        <div>
+                          <span>
+                          <mat-icon style=" color: #21969D;font-size: 32px; ">add_box</mat-icon>
+                          </span>
+                        </div>
+                 </div>
+
+            </div>
+
+
+        </div>     
+    </div>
+
+
+    <div class="example-container mat-elevation-z8">
+      <mat-table #table [dataSource]="dataSource">
+    
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef style="width: 30%;padding: 1px;padding: 10px;"> Dataset Collection (15 dataset/20TB)
+            <span><i class="material-icons play_arrow_icon" style="margin-left: 150px;">play_arrow</i></span> 
+          </th>
+          
+            <td mat-cell *matCellDef="let element" class="dataCollection" style="width: 30%">
+            <span><i class="material-icons play_arrow_icon" style="border-radius: 50px;color: white;font-size: 18px;margin-right: 20px;">play_arrow</i></span> 
+            {{element.position}} </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef style="width: 15%;padding: 15px;"> Owner </th>
+          <td mat-cell *matCellDef="let element" class="dataCollection" style="width: 15%"> {{element.name}} 
+          </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef style="width: 17%;padding: 15px;"> Keyword </th>
+          <td mat-cell *matCellDef="let element" class="dataCollection" style="width: 17%">
+             {{element.weight}} </td>
+        </ng-container>
+        <ng-container matColumnDef="symbol">
+          <th mat-header-cell *matHeaderCellDef style="width: 12%;padding: 15px;"> Data Item </th>th>
+          <td mat-cell *matCellDef="let element" class="dataCollection" style="width: 12%"> 
+            {{element.symbol}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="type">
+          <th mat-header-cell *matHeaderCellDef style="width: 16%;padding: 15px;"> Data Type </th>
+          <td mat-cell *matCellDef="let element" class="dataCollection" style="width: 16%">
+             {{element.type}} </td>
+        </ng-container>
+        <ng-container matColumnDef="size">
+          <th mat-header-cell *matHeaderCellDef style="width: 10%;padding: 15px;"> Size</th>
+          <td mat-cell *matCellDef="let element" class="dataCollection" style="width: 10%">
+             {{element.size}}
+            <button type="button" class="close" aria-label="Close">
+              <span aria-hidden="true" class="cross">×</span>
+            </button>
+          </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="expandedDetail">
+          <mat-cell *matCellDef="let detail"> 
+            <!-- The symbol for {{detail.element.name}} is {{detail.element.symbol}} -->
+            <div fxLayout fxFlex="100" style="background-color: #DCEAE9; align-items: center;width: auto;max-width: none; height: auto;">
+              <div fxFlex="" style="margin: 20px 20px;">
+               
+                   Description
+                   <div class="description-text">
+                    <div >         
+                      <table class="table">
+                        <thead>
+                          <tr style="color: black;">
+                            <th></th>
+                            <th>Count</th>
+                            <th>Mean</th>
+                            <th>std</th>
+                            <th>Min</th>
+                            <th>Max</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Alloy</td>
+                            <td>355</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <td>phi1</td>
+                            <td>355</td>
+                            <td>129.7</td>
+                            <td>134.56</td>
+                            <td>178.90</td>
+                            <td>167.90</td>
+                          </tr>
+                          <tr>
+                            <td>phi2</td>
+                            <td>355</td>
+                            <td>129.7</td>
+                            <td>134.5</td>
+                            <td>178.90</td>
+                            <td>167.0</td>
+                          </tr>
+                          <tr>
+                            <td>Alloy</td>
+                            <td>355</td>
+                            <td>129.79</td>
+                            <td>134.5</td>
+                            <td>178.9</td>
+                            <td>167.90</td>
+                          </tr>
+                          <tr>
+                            <td>yind</td>
+                            <td>355</td>
+                            <td>129.7</td>
+                            <td>134.56</td>
+                            <td>178.9</td>
+                            <td>167.90</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                      </div>
+                  </div>
+                </div>
+    
+              <div fxFlex="20"style="margin: 20px;">
+                Contributors 
+                <div class="contributer-text">Contributor</div>
+                <div class="contributer-text">Contributor</div>
+                <div class="contributer-text">Contributor</div>
+                <div class="contributer-text">Contributor</div>
+                <div class="contributer-text">Contributor</div>
+                <div class="contributer-text">Contributor</div>
+                <div class="contributer-text">Contributor</div>
+              </div>
+              <div fxFlex="25"style="margin: 20px;">
+                image preview....
+                <div style="width: 100%; background-color: white; ">
+                 <img src="../../assets/images/Capture.PNG" width="300px" height="200px" style="margin-left: 15px;"> 
+                 </div>
+              </div>
+              <div fxFlex="20" style="margin: 40px;background-color: white; ">
+                 <div fxLayout="row">
+                     <div fxflex="50" class="access-text">Last access:
+                     </div>
+                     <div fxflex="50" fxLayoutAlign="end center" class="access-text">30/12/2021
+                     </div>
+                  </div>
+                  <div class="access-text">EDA:</div>
+                     <ul>
+                       <li>More Details</li>
+                       <li>More Details</li>
+                       <li>More Details</li>
+                     </ul>
+                     <div fxLayout="row">
+                      <div fxflex="50" class="access-text">Last access:
+                      </div>
+                      <div fxflex="50"  class="access-text">CL,PCA
+                      </div>
+                   </div>
+                   <!-- <div fxLayout="row">
+                    <div fxflex="50" class="access-text">Last access:
+                    </div>
+                    <div fxflex="50"  class="access-text">CL,PCA
+                    </div>
+                  </div> -->
+              </div>
+              <div fxFlex="15" style="text-align: center;margin: 30px;">
+                <button mat-raised-button class="tab-button">More Details</button><br>
+                <button mat-raised-button class="tab-button">Preview Existing Models</button><br>
+                <button mat-raised-button class="tab-button">Preview Existing Models</button><br>
+                <button mat-raised-button class="tab-button">Build a Model </button>
+              </div>
+            </div>
+          </mat-cell>
+        </ng-container>
+
+        
+    
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"
+                matRipple 
+                class="element-row" 
+                [class.expanded]="expandedElement == row"
+                (click)="expandedElement = row"></mat-row>
+        <mat-row *matRowDef="let row; columns: ['expandedDetail']; when: isExpansionDetailRow"
+                [@detailExpand]="row.element == expandedElement ? 'expanded' : 'collapsed'"
+                style="overflow: hidden"> 
+        </mat-row>
+      </mat-table>
+    </div>
+
+
+  </div>
+
+
+
+        <!-- <mat-accordion>
+      <mat-expansion-panel style="max-width: 95%; margin: -40px 30px;" hideToggle>
+        <mat-expansion-panel-header style="width: 100%;">
+          <div fxLayout="row" fxFlex="100">
+            <div fxFlex="30">
+              <span><i class="material-icons play_arrow_icon" style="border-radius: 50px;color: white;font-size: 18px;">play_arrow</i></span> 
+              Thermally aged Nikel-based superlloy
+              </div>
+              <div fxFlex="15">
+                Anna kapustina 
+              </div>
+              <div fxFlex="20">
+                SEM,DEN Induction....
+              </div>
+              <div fxFlex="10">
+                60
+              </div>
+              <div fxFlex="15">
+                Experimental
+              </div>
+              <div fxFlex="5">
+                1TB
+              </div>
+          </div>
+         </mat-expansion-panel-header>  
+        <div fxLayout style="background-color: #DCEAE9;">
+          <div fxFlex="40" style="margin: 20px 20px;">
+           
+               Description
+               <div class="description-text">
+               <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites</p>
+              </div>
+            </div>
+
+          <div fxFlex="15"style="margin: 20px;">
+            Contributors 
+            <div class="contributer-text">Contributor</div>
+            <div class="contributer-text">Contributor</div>
+            <div class="contributer-text">Contributor</div>
+            <div class="contributer-text">Contributor</div>
+            <div class="contributer-text">Contributor</div>
+            <div class="contributer-text">Contributor</div>
+            <div class="contributer-text">Contributor</div>
+          </div>
+          <div fxFlex="30"style="margin: 20px;">
+            image preview....
+            <div style="width: 100%; background-color: white; ">
+             <img src="../../assets/images/Capture.PNG" width="300px" height="200px" style="margin-left: 15px;"> 
+             </div>
+          </div>
+          <div fxFlex="18" style="margin: 40px;background-color: white; ">
+             <div fxLayout="row">
+                 <div fxflex="50" class="access-text">Last access:
+                 </div>
+                 <div fxflex="50" fxLayoutAlign="end center" class="access-text">30/12/2021
+                 </div>
+              </div>
+              <div class="access-text">EDA:</div>
+                 <ul>
+                   <li>More Details</li>
+                   <li>More Details</li>
+                   <li>More Details</li>
+                 </ul>
+                 <div fxLayout="row">
+                  <div fxflex="50" class="access-text">Last access:
+                  </div>
+                  <div fxflex="50"  class="access-text">CL,PCA
+                  </div>
+               </div>
+               <div fxLayout="row">
+                <div fxflex="50" class="access-text">Last access:
+                </div>
+                <div fxflex="50"  class="access-text">CL,PCA
+                </div>
+              </div>
+          </div>
+          <div fxFlex="15" style="text-align: center;margin: 30px;">
+            <button mat-raised-button class="tab-button">More Details</button><br>
+            <button mat-raised-button class="tab-button">Preview Existing Models</button><br>
+            <button mat-raised-button class="tab-button">Preview Existing Models</button><br>
+            <button mat-raised-button class="tab-button">Build a Model </button>
+          </div>
+        </div>
+      </mat-expansion-panel>
+      </mat-accordion>  
+       -->
+    
+

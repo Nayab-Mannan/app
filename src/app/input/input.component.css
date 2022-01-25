@@ -1,0 +1,157 @@
+html, body {
+    height: 100%;
+    width: 100%;
+   
+}
+.main-container{
+    overflow: hidden;    
+}
+.sub-container{
+    padding-top: 29px;
+     margin-top: 20px; 
+    
+}
+.left-container{
+    background-color:#21969D;
+    height: 700px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: center;
+}
+.right-container{
+    background: linear-gradient(to bottom, rgb(225, 233, 233) 0%, #DCEAE9 90%); color: white;
+    height: 700px;
+    text-align: center;
+}
+ h1{
+    color:  white;
+    font-size: 52px;
+   
+}
+
+.redirect-link1 a{
+    font-size: large;
+    color: #FFFFFF;
+    padding-top: 50px;
+
+}
+.redirect-link2 a{
+    font-size: large;
+    color: #FFFFFF;
+    margin-top: 40px;
+}
+/* .redirect-link2 a:hover, .redirect-link1 a:hover{
+    color: rgb(224, 216, 216);
+} */
+.redirect-link1{
+    margin-top: 60px;
+}
+.redirect-link2{
+    margin-top: 20px;
+}
+
+mat-list-option[aria-selected="true"] {
+    background:#216373;
+  }
+  .mat-list-option {
+    
+      padding: 12px !important;
+     
+      
+  }
+  .mat-list-item {
+  color: #FFFFFF;
+  
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    
+    /* border-radius: 2px; */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:#216373; 
+    min-height: 40px;
+    /* border-radius: 10px; */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: darkcyan; 
+  }
+  .folder{
+    color: rgb(236, 201, 135); 
+    vertical-align: middle;
+  }
+  .checkout{
+    color: rgb(38, 89, 119);
+     vertical-align: middle;
+     transform: rotate(90deg)
+  }
+  
+  .box {
+    background: linear-gradient(to bottom, rgb(225, 233, 233) 0%, #21969D 90%); color: white;
+    border: 1px solid #216373;
+    color: white;
+    border-radius: 6px;
+    margin: 120px;
+    height: 350px;
+   position: relative;
+    /* display: flex; */
+   align-items: center;
+  justify-content: center;
+  }
+
+  input {
+   
+    border-radius: 5px;
+    padding: 20px;
+    width: 72%;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    
+  }
+  .btn-submit{background: #216373; 
+    color:#fff; 
+    font-weight:600;
+    border: none;
+    /* float: right; */
+    cursor: pointer;
+    cursor: hand;
+    padding: 10px 35px;
+    margin-top: 25px;
+}
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  /* input[type=text]:hover{
+    background-color: #DCEAE9;
+  
+  } */
+  .back-button{
+    line-height: 25px;
+    width: 70px;
+    font-size: 10pt;
+    position:absolute;
+    top:0;
+    left:0;
+    background: #21969D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    cursor: hand;
+  
+  }
+  

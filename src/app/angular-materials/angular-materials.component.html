@@ -1,0 +1,80 @@
+<!-- <div class="example-container mat-elevation-z8">
+	<mat-table #table [dataSource]="dataSource">
+  
+	 
+	  <ng-container matColumnDef="position">
+		<mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+		<mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+	  </ng-container>
+  
+	
+	  <ng-container matColumnDef="name">
+		<mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+		<mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+	  </ng-container>
+  
+	  <ng-container matColumnDef="weight">
+		<mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+		<mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+	  </ng-container>
+  
+	
+	  <ng-container matColumnDef="symbol">
+		<mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+		<mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+	  </ng-container>
+  
+	  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+	  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+	</mat-table>
+  
+	<mat-paginator #paginator
+				   [pageSize]="10"
+				   [pageSizeOptions]="[5, 10, 20]">
+	</mat-paginator>
+  </div> -->
+  
+  
+  <!-- Copyright 2017 Google Inc. All Rights Reserved.
+	  Use of this source code is governed by an MIT-style license that
+	  can be found in the LICENSE file at http://angular.io/license -->
+	  <!-- <button mat-stroked-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+		Pool party!
+	  </button> -->
+	  <mat-spinner></mat-spinner>
+	  <mat-drawer-container class="example-container">
+		<mat-drawer mode="side" opened>Drawer content</mat-drawer>
+		<mat-drawer-content>Main content</mat-drawer-content>
+	  </mat-drawer-container>
+	  
+	  <mat-stepper>
+		<mat-step label="Step 1" state="phone">
+		  <p>Put down your phones.</p>
+		  <div>
+			<button mat-button matStepperNext>Next</button>
+		  </div>
+		</mat-step>
+		<mat-step label="Step 2" state="chat">
+		  <p>Socialize with each other.</p>
+		  <div>
+			<button mat-button matStepperPrevious>Back</button>
+			<button mat-button matStepperNext>Next</button>
+		  </div>
+		</mat-step>
+		<mat-step label="Step 3">
+		  <p>You're welcome.</p>
+		</mat-step>
+	  
+		<!-- Icon overrides. -->
+		<ng-template matStepperIcon="phone">
+		  <mat-icon>call_end</mat-icon>
+		</ng-template>
+		<ng-template matStepperIcon="chat">
+		  <mat-icon>forum</mat-icon>
+		</ng-template>
+	  </mat-stepper>
+
+	  <button mat-stroked-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+		Pool party!
+	  </button>
+	  

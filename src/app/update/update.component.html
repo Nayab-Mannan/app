@@ -1,0 +1,21 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<button  style="margin-bottom: 20px;background-color: darkcyan;color: white;border: none;padding: 15px;"><a routerLink="Home" style="color: white;">Home</a></button>
+
+<div *ngIf="alert" class="alert alert-success alert-dismissible " role="alert">
+  <strong>Success!</strong> Data updated successfully.
+  <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<h2 style="margin-top: 20px;">Edit Product</h2>
+  <form   [formGroup]= "editForm" >
+  <input type="text" formControlName="id" ><br><br>
+  <input type="text"  formControlName="title" ><br><br>
+  <input type="text"  formControlName="userId" ><br><br>
+ 
+  <button style="margin-bottom: 20px;background-color: darkcyan;color: white;border: none;padding: 8px;"  (click)="collection();" >Submit</button>
+  </form>
+ 

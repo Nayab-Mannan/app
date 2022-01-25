@@ -1,0 +1,132 @@
+<div class="main">
+    <div class="content">
+         <div class="header-container">
+             <span class="project-text">Project Name/Dataset_Name_001/Model Prediction</span>
+             <div class="button">
+                 <div>
+                     <div class="one">
+                     </div>  
+                     <div class="two">
+                         <span><mat-icon>keyboard_arrow_left</mat-icon></span>
+                    </div>    
+                 </div>    
+             </div>    
+         </div>
+         <div class="server-path">
+             <div class="left-frame">
+                <span class="csv-text">Select csv file</span>
+                <div class="test-data-frame">
+                    <div class="line">
+                    </div>
+                    <div class="frame">
+                        <input type="file" class="upload-file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
+                        accept=".csv" />
+                    </div>        
+                 </div>   
+              </div>
+              <select aria-placeholder="Parse headers?" [(ngModel)]="header">
+                  <option [value]="true">CSV</option>
+                 <option [value]="false">JSON</option>
+              </select>
+             <button  class="button-upload"  >
+                 <span class="bttn-upload-text">UPLOAD</span>
+                 <div class="icon-frame">
+                     <span class="icon-upload"><mat-icon style="font-size: 18px;"> vertical_align_top</mat-icon></span>
+                 </div>    
+             </button>
+
+            <button class="run-prediction">
+                <span class="prediction-text">RUN PREDICTION</span>
+            </button>
+            <button class="store-prediction" (click)="downloadCSV()">
+                <span class="store-text">STORE PREDICTION</span>
+            </button>    
+        </div>
+        <div class="review-container">
+            <div class="left-review-container">
+                <span class="preview">Data Preview</span> 
+            </div> 
+            <div class="right-review-container">
+                <div class="arrow-left">
+                    <div class="left-icon">
+                        <div class="left1">	<mat-icon>keyboard_backspace</mat-icon></div>
+                     </div>   
+                </div>
+                <div class="arrow-right">
+                    <div class="right-icon">
+                        <div class="right1">	<mat-icon>keyboard_backspace</mat-icon></div>
+                    </div>   
+                </div>             
+            </div>  
+        </div>
+        <div class="divider">   
+        </div>        
+        <table >  
+            <tr  style="border-bottom: 1px solid #959393;" >
+            <div class=" table-heading" (click)="toggleShow()" >
+                <th >#</th> <th>CRIM</th> <th>ZN</th>
+                <th>INDUS</th> <th>CHAS</th>
+                <th>NOX</th><th>RM</th>
+                <th>DIS</th><th>AGE</th>
+                <th>RAD</th><th>TAX</th>
+                <th>PTRATIO</th><th>B</th>
+            </div>
+            </tr>
+            <tr class="table-row" *ngFor="let csvData of csvRecords  | paginate
+            : {
+               itemsPerPage: pageSize, currentPage: p 
+              },let i = index  ">
+              <!-- <td>{{i+1}}</td> -->
+                <td>{{(i+1)+ pageSize*(p-1)}}</td>
+        <td>
+          {{csvData.CRIM}}
+        </td>
+        <td>
+            {{csvData.CRIM}}
+          </td>
+          <td>
+            {{csvData.CRIM}}
+          </td>
+          <td>
+            {{csvData.CRIM}}
+          </td>
+          <td>
+            {{csvData.CRIM}}
+          </td>
+          <td>
+            {{csvData.CRIM}}
+          </td>
+          <td>
+            {{csvData.CRIM}}
+          </td>
+          <td>
+            {{csvData.CRIM}}
+          </td>
+          <td>
+            {{csvData.CRIM}}
+          </td>
+          <td>
+            {{csvData.CRIM}}
+          </td>
+          <td>
+            {{csvData.CRIM}}
+          </td>
+          <td>
+            {{csvData.CRIM}}
+          </td>
+            </tr>    
+        </table> 
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        <!-- <div class="image-container"  *ngIf="isShown" > -->
+             <!-- <img src="assets/image/Capture1.PNG" alt="image" style="width: 1182px;height: 155px;"> -->
+            <div class="image-container"> 
+             <div id="myPlot" style="width:100%;max-width:1500px"></div>
+         </div>                       
+    </div>   
+</div>
+
+
+
+
+      
+

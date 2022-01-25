@@ -1,0 +1,57 @@
+body
+{
+    margin:0;
+   
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.header{
+    background-color: #216373;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .container{
+      /* height: calc(100% - 20px); */
+      position: fixed;  
+      /* overflow: hidden; */
+    
+  }
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 8px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #1f6273;
+    color: white;
+    font-style: normal;
+  }
+  ::ng-deep.mat-toolbar{
+      width: 100%;
+  }
+  
+.mat-toolbar{
+    color: white;
+    background: linear-gradient(to right, rgb(225, 233, 233) 0%, #216373 60%); color: white;
+}
+.icon{
+    font-size: 32px;
+    vertical-align: top;
+}
+.text{
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    vertical-align: middle;
+    font-weight: normal;
+}

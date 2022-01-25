@@ -1,0 +1,125 @@
+<div fxLayout="row" class="main">
+    <div fxLayout="column">
+        <div fxFlex style="color: darkcyan;">Get Data
+        </div>  
+        <div class="container"> 
+            <div fxFlex style="margin-right:15px;flex: 1 1 100%;
+            box-sizing: border-box;
+            max-width: 40%;">
+                <!-- <div class="wrap" [class.vert]="(tabWay=='vert')">
+                    <mat-tab-group>
+                      <mat-tab label="First"> Content 1 </mat-tab>
+                      <mat-tab label="Second"> Content 2 </mat-tab>
+                      <mat-tab label="Third"> Content 3 </mat-tab>
+                    </mat-tab-group>
+                  </div>
+                  -->
+
+            </div>   
+        </div>    
+    </div>   
+
+</div>
+
+
+<div class="wrap" [class.vert]="(tabWay=='vert')">
+    <mat-tab-group>
+      <mat-tab label="First"> Content 1 </mat-tab>
+      <mat-tab label="Second"> Content 2 </mat-tab>
+      <mat-tab label="Third"> Content 3 </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <html ng-app="plunker">
+
+    <head>
+      <meta charset="utf-8" />
+      <title>AngularJS Plunker</title>
+      <script>document.write('<base href="' + document.location + '" />');</script>
+     
+      <script data-require="angular.js@1.5.x" src="https://code.angularjs.org/1.5.8/angular.js" data-semver="1.5.8"></script>
+      <script src="app.js"></script>
+    </head>
+  
+    <body ng-controller="MainCtrl">
+      <div class="social_icon_radio_toggle">
+                                  <label class="linkedin" >
+                                      <input type="radio" name="registration_options"  ng-model="option" ng-value="'linkedin'">
+                                      <span><i class="fa fa-linkedin"></i> </span></label>
+                                  <label class="facebook" >
+                                      <input type="radio" name="registration_options" ng-value="'facebook'" ng-model="option">
+                                      <span><i class="fa fa-facebook"></i> </span></label>
+                              </div>
+                             c
+                              <div>
+                                  <input class="form-control margin_top_4" placeholder="www.linkedin.com/example" type="text" ng-show="option == 'linkedin'">
+                              </div>
+                              <input class="form-control margin_top_4" placeholder="www.facebook.com/example" type="text" ng-show="option == 'facebook'">
+    </body>
+  
+  </html>
+ 
+
+
+    <!-- <div style="padding: 20%">
+
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">EXisting Composition
+          <form class="example-form">
+            <mat-form-field appearance="fill" class="example-full-width">
+              <mat-select>
+              <input type="text" placeholder="" matInput>
+            
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
+        </mat-radio-button>
+        &nbsp;
+       
+      </mat-radio-group>
+    </div> -->
+    
+    <div class="example-container mat-elevation-z8">
+      <mat-table #table [dataSource]="dataSource">
+    
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+    
+        <ng-container matColumnDef="expandedDetail">
+          <mat-cell *matCellDef="let detail"> 
+            <!-- The symbol for {{detail.element.name}} is {{detail.element.position}} -->
+            <div class="example-button-row">
+              <button mat-button>Basic</button>
+              <button mat-button color="primary">Primary</button>
+              <button mat-button color="accent">Accent</button>
+              The symbol for {{detail.element.weight}}
+            </div>
+          </mat-cell>
+        </ng-container>
+        
+
+
+    
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"
+                matRipple 
+                class="element-row" 
+                [class.expanded]="expandedElement == row"
+                (click)="expandedElement = row"></mat-row>
+        <mat-row *matRowDef="let row; columns: ['expandedDetail']; when: isExpansionDetailRow"
+                [@detailExpand]="row.element == expandedElement ? 'expanded' : 'collapsed'"
+                style="overflow: hidden"> 
+        </mat-row>
+      </mat-table>
+    </div>
+    
+  

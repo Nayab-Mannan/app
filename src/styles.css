@@ -1,0 +1,41 @@
+mat-dialog-container {
+    background: #DCEAE9 !important;
+    max-width:100% !important;
+ }
+
+ .button-cancel{
+    background-color: darkcyan;
+    color: white;
+    font-size: 12px;
+    padding: 10px 30px;
+    margin: 40px;
+    margin-left: 90px;
+    border: none;
+ }
+ .button-export{
+   background-color: darkcyan;
+   color: white;
+   font-size: 12px;
+   padding: 10px 30px;
+   margin: 40px 20px;
+   border: none;
+}
+ 
+ select {
+    width: 200px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    height: 34px;
+    color: darkcyan;
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; */
+  }
+  .mat-expansion-indicator::before {
+   transform: rotate(270deg);  
+}
+.mat-expansion-toggle-indicator-before .mat-expansion-indicator{
+   transform: rotate(270deg); 
+}
+
